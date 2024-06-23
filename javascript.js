@@ -10,12 +10,14 @@ for (let row = 0; row < GRID_ROW; row++) {
     for (let col = 0; col < GRID_COL; col++) {
         let gridCol = document.createElement("div");
         gridCol.setAttribute("class", "box");
+        gridCol.addEventListener('mouseover', (event) => changeColor(event.target));
         gridRow.appendChild(gridCol);
     }
     gridMap.appendChild(gridRow);
 }
 
-
-// make the divs flexbox to appear as a grid
-
-// for each grid, set up hover effect -> change color when mouse passes over them
+function changeColor(box) {
+    // change color of grid
+    console.log(box);
+    box.setAttribute("class", "color");
+}
