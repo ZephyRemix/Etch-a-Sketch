@@ -19,7 +19,6 @@ for (let row = 0; row < GRID_ROW; row++) {
 }
 
 function changeColor(box) {
-    // change color of grid
     console.log(box);
     box.setAttribute("class", "color");
 }
