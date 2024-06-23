@@ -16,7 +16,6 @@ gridSizeToggle.addEventListener('click', () => {
     }
 });
 
-// create 16x16 grid of square divs
 function drawGrids () {
     for (let row = 0; row < rowNum; row++) {
         let gridRow = document.createElement("div");
@@ -25,7 +24,7 @@ function drawGrids () {
         for (let col = 0; col < colNum; col++) {
             let gridCol = document.createElement("div");
             gridCol.setAttribute("class", "box");
-            gridCol.addEventListener('mouseover', (event) => changeColor(event.target));
+            gridCol.addEventListener('mouseover', (event) => setBg(event.target));
             gridRow.appendChild(gridCol);
         }
         gridMap.appendChild(gridRow);
@@ -36,6 +35,12 @@ function changeColor(box) {
     console.log(box);
     box.setAttribute("class", "color");
 }
+
+const setBg = (box) => {
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    box.style.backgroundColor = "#" + randomColor;
+    color.innerHTML = "#" + randomColor;
+  }
 
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
