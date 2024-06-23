@@ -2,6 +2,7 @@ const GRID_ROW = 4;
 const GRID_COL = 4;
 
 let gridMap = document.querySelector(".gridMap");
+let gridSizeToggle = document.querySelector("button");
 
 // create 16x16 grid of square divs
 for (let row = 0; row < GRID_ROW; row++) {
