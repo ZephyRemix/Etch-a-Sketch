@@ -13,18 +13,35 @@ button {
     padding: 5px;
 }
 
-.gridMap {
+.content {
     display:flex;
     justify-content: center;
+    align-items:center;
+    height: 600px;
+}
+
+.gridMap {
+    width: 600px;
+    height: 600px;
+    display:flex;
+    flex-direction: column;
+}
+
+.row {
+    border: 3px solid green;
+    display:flex;
+    flex: 1;
+    width: 100%
+    
 }
 
 .box {
-    width: 2rem;
-    height: 2rem;
+    display: flex;
+    flex: 1;
 }
 
 .color {
+    display: flex;
+    flex: 1;
     background-color: aquamarine;
-    width: 2rem;
-    height: 2rem;
 }
